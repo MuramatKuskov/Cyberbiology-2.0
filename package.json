@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Cyber life evolution simulator",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "test": "npm run test"
   },
