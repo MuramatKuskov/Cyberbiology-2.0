@@ -1,0 +1,22 @@
+{
+  "name": "cyberbiology-2.0",
+  "version": "1.0.0",
+  "description": "Cyber life evolution simulator",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MuramatKuskov/Cyberbiology-2.0"
+  },
+  "keywords": [
+    "evolution"
+  ],
+  "author": "Kuskov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MuramatKuskov/Cyberbiology-2.0/issues"
+  },
+  "homepage": "https://github.com/MuramatKuskov/Cyberbiology-2.0#readme"
+}
