@@ -8,11 +8,53 @@
 	<script src="./src/main.js" type="module"></script>
 	<!-- <link rel="icon" href="../public/favicon.ico" /> -->
 	<title>Cyberbiology 2.0</title>
+	<link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body style="box-sizing: border-box;margin: 0;padding: 0;overflow: hidden;">
 	<noscript>You need to enable JavaScript to run this app.</noscript>
-	<canvas class="canvas"></canvas>
+
+	<canvas></canvas>
+
+	<div class="overlays">
+		<div class="inspection">
+			<svg width="25" height="25" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<path
+					d="M10 6.5C10 8.433 8.433 10 6.5 10C4.567 10 3 8.433 3 6.5C3 4.567 4.567 3 6.5 3C8.433 3 10 4.567 10 6.5ZM9.30884 10.0159C8.53901 10.6318 7.56251 11 6.5 11C4.01472 11 2 8.98528 2 6.5C2 4.01472 4.01472 2 6.5 2C8.98528 2 11 4.01472 11 6.5C11 7.56251 10.6318 8.53901 10.0159 9.30884L12.8536 12.1464C13.0488 12.3417 13.0488 12.6583 12.8536 12.8536C12.6583 13.0488 12.3417 13.0488 12.1464 12.8536L9.30884 10.0159Z"
+					fill="#dbdbdb" fill-rule="evenodd" clip-rule="evenodd" data-darkreader-inline-fill=""
+					style="--darkreader-inline-fill: #dbdbdb;"></path>
+			</svg>
+		</div>
+
+		<div class="parameters">
+			<div class="parameters__container">
+				<fieldset id="geometry-control" class="parameters__entry">
+					<span class="parameters__info">World geometry:</span>
+					<input id="geo-bordered" class="parameters__input" type="radio" name="geometry" value="bordered" checked>
+					<label for="geo-bordered" class="parameters__label">Bordered</label>
+					<input id="geo-closed" class="parameters__input" type="radio" name="geometry" value="closed">
+					<label for="geo-closed" class="parameters__label">Closed</label>
+				</fieldset>
+				<fieldset id="humans-control" class="parameters__entry">
+					<label for="humans" class="parameters__info">Human population:</label>
+					<input type="range" min="0" max="500" step="5" class="parameters__input" id="humans">
+				</fieldset>
+				<fieldset id="trees-control" class="parameters__entry">
+					<label for="forest" class="parameters__info">Forest cover:</label>
+					<input type="range" min="0" max="10" step="1" class="parameters__input" id="forest">
+				</fieldset>
+			</div>
+		</div>
+
+		<div class="play-container">
+			<div class="play-options">
+				<img src="./public/icons/Play.svg" id="play-btn" alt="Play simulation" class="play-options-btn">
+				<img src="./public/icons/Pause.svg" id="pause-btn" alt="Pause simulation" class="play-options-btn hidden">
+				<img src="./public/icons/Next.svg" id="next-frame-btn" alt="Simulate next frame" class="play-options-btn">
+				<img src="./public/icons/Stop.svg" id="stop-btn" alt="Stop current simulation" class="play-options-btn">
+			</div>
+		</div>
+	</div>
 </body>
 
 </html>

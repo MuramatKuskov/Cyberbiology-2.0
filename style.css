@@ -1,0 +1,112 @@
+::-webkit-scrollbar {
+	width: 0px;
+}
+
+*, body {
+	scrollbar-width: thin;
+	/* Set scrollbar width */
+	scrollbar-color: #e0e0e0 #959595;
+	/* Set track and thumb color */
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	border: none;
+	font-size: 22px;
+}
+
+.inspecting:hover {
+	cursor: crosshair;
+}
+
+.inspection {
+	position: absolute;
+	top: 2em;
+	right: 2em;
+	padding: 3px 3px 0 3px;
+	color: azure;
+	background-color: rgba(29, 29, 29, 0.7);
+	border-radius: 25%;
+	transition-duration: 100ms;
+}
+
+.inspection:hover {
+	cursor: pointer;
+	scale: 1.2;
+}
+
+.parameters {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 15%;
+	height: 100%;
+}
+
+.parameters:hover > .parameters__container {
+	transform: translateX(0);
+}
+
+.parameters__container {
+	height: 100%;
+	padding: 20px 10px;
+	transition-duration: 150ms;
+	color: azure;
+	background-color: rgba(29, 29, 29, 0.7);
+}
+
+.parameters__container.hidden {
+	transform: translateX(-100%);
+}
+
+.parameters__entry {
+	margin-bottom: 15px;
+}
+
+.parameters__info {
+	display: block;
+	margin-bottom: 5px;
+}
+
+.parameters__input {}
+
+.parameters__label {}
+
+.play-container {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	height: 10%;
+}
+
+.play-container:hover > .play-options {
+	transform: translateY(0);
+}
+
+.play-options {
+	width: fit-content;
+	margin: 0 auto;
+	display: flex;
+	padding: 10px 15px;
+	gap: 15px;
+	border-radius: 30px;
+	transition-duration: 200ms;
+	background-color: rgba(29, 29, 29, 0.7);
+}
+
+.play-options.hidden {
+	transform: translateY(300%);
+}
+
+.play-options-btn {
+	width: 18px;
+	transition-duration: 100;
+}
+
+.play-options-btn:hover {
+	transform: scale(1.25);
+	cursor: pointer;
+}
+
+.play-options-btn.hidden {
+	display: none;
+}

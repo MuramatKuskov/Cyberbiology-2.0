@@ -1,10 +1,11 @@
-import { World } from "./components/World/World.js";
+import { Forest } from "./components/Bioms/Forest.js";
+import { WORLD_PARAMETERS, listenUserActions } from "./world-parameters.js";
 
-const CANVAS = document.querySelector(".canvas");
+const CANVAS = document.querySelector("canvas");
 CANVAS.width = window.innerWidth;
 CANVAS.height = window.innerHeight;
-const ctx = CANVAS.getContext('2d');
-const world = new World();
-world.drawField(ctx, 0, 0, window.innerWidth, window.innerHeight);
-world.drawForest(ctx, 0, window.innerHeight / 1.4, window.innerWidth, window.innerHeight);
-world.drawRiver(ctx, 0, 0, window.innerWidth, window.innerHeight / 4);
+window.ctx = CANVAS.getContext('2d');
+
+let forest = new Forest(WORLD_PARAMETERS);
+forest.init();
+listenUserActions(CANVAS, forest);
